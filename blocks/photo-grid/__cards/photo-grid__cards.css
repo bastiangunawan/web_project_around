@@ -1,0 +1,11 @@
+.photo-grid__cards{
+    width: 282px;
+    height: 361px;
+    display: grid;
+    grid-template-areas: 
+    'images images'
+    'text love';
+    background-color: #fff;
+    border-radius: 10%;
+    overflow: hidden;
+}

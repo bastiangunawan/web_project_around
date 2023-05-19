@@ -1,0 +1,16 @@
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    width: 880px;
+    height: fit-content;
+    border-bottom: 1px solid #545454;
+    margin: 0 auto 36px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1279px) {
+    .header{
+        width: 320px;
+        height: fit-content;
+        margin-bottom: 38px;
+    }
+}

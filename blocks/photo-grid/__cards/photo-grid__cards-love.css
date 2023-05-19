@@ -1,0 +1,6 @@
+.photo-grid__cards-love{
+    grid-area: love;
+    text-align: center;
+    font-size: 24px;
+    margin: 0 15px 0 0;
+}

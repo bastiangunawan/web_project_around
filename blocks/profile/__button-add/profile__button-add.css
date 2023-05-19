@@ -1,0 +1,22 @@
+.profile__button-add{
+    width: 150px;
+    height: 50px;
+    border: 2px solid #fff;
+    background-color: #000;
+    margin: 0;
+    color: #fff;
+    padding: 0;
+    margin-top: 35px;
+    grid-area: add;
+}
+
+.profile__button-add:active {
+    border: 2px solid grey;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1279px) {
+    .profile__button-add{
+        width: 282px;
+        height: 50px;
+    }
+}

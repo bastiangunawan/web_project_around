@@ -1,0 +1,11 @@
+.header__title-sup{
+    font-size: 12px;
+    vertical-align: text-top;
+    top: 0.5em;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1279px) {
+    .header__title-sup{
+        font-size: 8px;
+    }
+}

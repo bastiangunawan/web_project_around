@@ -1,0 +1,19 @@
+.profile__button-edit{
+    width: 24px;
+    height: 24px;
+    border: 1px solid #fff;
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.profile__button-edit:active {
+    border: 1px solid grey;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1279px) {
+    .profile__button-edit{
+        width: 18px;
+        height: 18px;
+    }
+}

@@ -1,0 +1,24 @@
+.profile{
+    width: 880px;
+    height: 120px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: 
+        'image info add';
+    margin: 0 auto 50px;
+    column-gap: 25px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1279px) {
+    .profile {
+        width: 282px;
+        height: fit-content;
+        grid-template-areas: 
+            'image'
+            'info'
+            'add';
+        margin: 0 auto 36px;
+        column-gap: 0;
+        row-gap: 26px;
+    }
+}
