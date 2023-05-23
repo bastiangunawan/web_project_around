@@ -2,6 +2,7 @@
     width: 282px;
     height: 361px;
     display: grid;
+    grid-template-columns: 80% 20%;
     grid-template-areas: 
     'images images'
     'text love';
