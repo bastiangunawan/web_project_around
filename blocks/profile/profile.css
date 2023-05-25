@@ -13,6 +13,7 @@
     .profile {
         width: 282px;
         height: fit-content;
+        grid-template-columns: none;
         grid-template-areas: 
             'image'
             'info'
