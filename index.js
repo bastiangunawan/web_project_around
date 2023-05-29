@@ -1,11 +1,35 @@
-/*const love = document.querySelector('.photo-grid__cards-love');*/
-const love1 = document.querySelector('#love-1').onclick = function() {myFunction1()}
-const love2 = document.querySelector('#love-2').onclick = function() {myFunction2()}
-const love3 = document.querySelector('#love-3').onclick = function() {myFunction3()}
-const love4 = document.querySelector('#love-4').onclick = function() {myFunction4()}
-const love5 = document.querySelector('#love-5').onclick = function() {myFunction5()}
-const love6 = document.querySelector('#love-6').onclick = function() {myFunction6()}
+const edit = document.querySelector('.profile__button-edit');
+/*const pages = document.querySelector('.page');*/
+const pop = document.querySelector('.pop-up')
+const close = document.querySelector('.pop-up__close')
+const save = document.querySelector('.pop-up__save');
+const names = document.querySelector('.profile__info-names');
+const input = document.querySelector('input[id="names"]');
+const love1 = document.querySelector('#love-1');
+const love2 = document.querySelector('#love-2');
+const love3 = document.querySelector('#love-3');
+const love4 = document.querySelector('#love-4');
+const love5 = document.querySelector('#love-5');
+const love6 = document.querySelector('#love-6');
 
+edit.addEventListener('click', () => {
+    /*pages.classList.add('page__pop-up');*/
+    pop.classList.add('pop-up__active');
+});
+close.addEventListener('click', () => {
+    pop.classList.remove('pop-up__active');
+});
+save.addEventListener('click', () => {
+    names.innerHTML = input.value;
+    pop.classList.remove('pop-up__active');
+});
+
+love1.addEventListener('click', myFunction1);
+love2.addEventListener('click', myFunction2);
+love3.addEventListener('click', myFunction3);
+love4.addEventListener('click', myFunction4);
+love5.addEventListener('click', myFunction5);
+love6.addEventListener('click', myFunction6);
 
 function myFunction1() {
     document.querySelector('#love-1').src='./images/heart_active.svg';

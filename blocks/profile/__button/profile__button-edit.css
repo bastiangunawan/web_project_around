@@ -1,14 +1,24 @@
 .profile__button-edit{
-    width: 10px;
-    height: 10px;
     display: flex;
-    margin: 7px;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    padding: 7px;
+    margin: auto 0 0 0;
+}
+
+.profile__button-edit:hover{
+    fill: #808080;
+    border-color: #808080;
 }
 
 @media screen and (min-width: 320px) and (max-width: 1279px) {
     .profile__button-edit{
-        width: 7.5px;
-        height: 7.5px;
-        margin: 5.25px;
+        width: 18px;
+        height: 18px;
+        margin: 28px 0 0 0;
+        display: flex;
+        padding: 3.5px;
     }
 }

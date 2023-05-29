@@ -1,0 +1,15 @@
+.pop-up__container-names{
+    width: 358px;
+    margin: 54px auto 0;
+    border: none;
+    border-bottom: 1px solid #000;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1279px) {
+    .pop-up__container-names{
+        width: 238px;
+        margin: 76px auto 0;
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
