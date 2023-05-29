@@ -1,10 +1,12 @@
 const edit = document.querySelector('.profile__button-edit');
 /*const pages = document.querySelector('.page');*/
-const pop = document.querySelector('.pop-up')
-const close = document.querySelector('.pop-up__close')
+const pop = document.querySelector('.pop-up');
+const close = document.querySelector('.pop-up__close');
 const save = document.querySelector('.pop-up__save');
 const names = document.querySelector('.profile__info-names');
+const jobs = document.querySelector('.profile__info-jobs')
 const input = document.querySelector('input[id="names"]');
+const input2 = document.querySelector('input[id="jobs"]');
 const love1 = document.querySelector('#love-1');
 const love2 = document.querySelector('#love-2');
 const love3 = document.querySelector('#love-3');
@@ -21,6 +23,7 @@ close.addEventListener('click', () => {
 });
 save.addEventListener('click', () => {
     names.innerHTML = input.value;
+    jobs.innerHTML = input2.value;
     pop.classList.remove('pop-up__active');
 });
 
