@@ -1,6 +1,6 @@
 const edit = document.querySelector('.profile__button-edit');
-/*const pages = document.querySelector('.page');*/
 const pop = document.querySelector('.pop-up');
+const body = document.querySelector('.body');
 const close = document.querySelector('.pop-up__close');
 const save = document.querySelector('.pop-up__save');
 const names = document.querySelector('.profile__info-names');
@@ -15,16 +15,18 @@ const love5 = document.querySelector('#love-5');
 const love6 = document.querySelector('#love-6');
 
 edit.addEventListener('click', () => {
-    /*pages.classList.add('page__pop-up');*/
-    pop.classList.add('pop-up__active');
+    pop.classList.add('pop-up--active');
+    body.classList.add('body--active');
 });
 close.addEventListener('click', () => {
-    pop.classList.remove('pop-up__active');
+    pop.classList.remove('pop-up--active');
+    body.classList.remove('body--active');
 });
 save.addEventListener('click', () => {
     names.innerHTML = input.value;
     jobs.innerHTML = input2.value;
-    pop.classList.remove('pop-up__active');
+    pop.classList.remove('pop-up--active');
+    body.classList.remove('body--active');
 });
 
 love1.addEventListener('click', myFunction1);

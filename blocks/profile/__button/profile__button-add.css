@@ -9,6 +9,7 @@
 }
 
 .profile__button-add:hover{
+    fill: #808080;
     border-color: #808080;
 }
 
