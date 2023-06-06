@@ -4,12 +4,15 @@
     height: 24px;
     background-color: transparent;
     border: 1px solid #fff;
-    padding: 7px;
     margin: auto 0 0 0;
+    background-image: url("../../../images/edit_symbol.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10px;
 }
 
 .profile__button-edit:hover{
-    fill: #808080;
+    background-image: url("../../../images/edit_symbol_hover.svg");
     border-color: #808080;
 }
 

@@ -1,14 +1,12 @@
 .photo-grid__cards-love{
-    width: fit-content;
-    height: fit-content;
+    width: 21px;
+    height: 19px;
     border: none;
     background-color: #fff;
     grid-area: love;
     text-align: center;
     font-size: 24px;
-    margin: 0 15px 0 0;
-}
-
-.photo-grid__cards-love:active {
-    background-image: url("/images/heart_active.svg");
+    background-image: url('../../../images/heart.svg');
+    background-repeat: none;
+    margin: 6px 0 0 15px;
 }

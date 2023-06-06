@@ -2,14 +2,16 @@
     width: 150px;
     height: 50px;
     margin: auto;
-    padding: 14px 64px;
     background-color: transparent;
     border: 2px solid #fff;
     grid-area: add;
+    background-image: url("../../../images/plus_symbol.svg");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .profile__button-add:hover{
-    fill: #808080;
+    background-image: url("../../../images/plus_hover.png");
     border-color: #808080;
 }
 

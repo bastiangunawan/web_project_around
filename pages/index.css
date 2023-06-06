@@ -19,6 +19,7 @@
 @import url(../blocks/photo-grid/__cards/photo-grid__cards-item.css);
 @import url(../blocks/photo-grid/__cards/photo-grid__cards-text.css);
 @import url(../blocks/photo-grid/__cards/photo-grid__cards-love.css);
+@import url(../blocks/photo-grid/__cards/photo-grid__cards-love--active.css);
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__copyright/footer__copyright.css);
 @import url(../blocks/pop-up/pop-up.css);

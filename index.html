@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/index.css">
-    <title>Around Parapat City | desktop + mobile</title>
+    <link rel="stylesheet" href="./pages/index.css">
+    <title>Sekitar Kota Parapat | desktop + mobile</title>
 </head>
 
 <body class="body">
     <div class="page">
         <header class="header">
-            <h2 class="header__title">Around<sup class="header__title-sup">Parapat City</sup></h2>
+            <h2 class="header__title">Sekitar<sup class="header__title-sup">Kota Parapat</sup></h2>
         </header>
 
         <main class="content">
@@ -20,83 +20,50 @@
 
                     <div class="profile__info">
                         <div class="profile__info-container">
-                            <p class="profile__info-names">Bastian Gunawan</p>
-                            <button type="button" class="profile__button-edit">
-                                <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="profile__button-edit" d="M26 3.45351L6.76981 22.7932L3.33585 19.2903L22.517 0L26 3.45351ZM0 26L5.10189 24.4706L1.52075 21.0171L0 26Z" fill="white"/>
-                                </svg>
-                            </button>
+                            <h1 class="profile__info-names">Bastian Gunawan</h1>
+                            <button type="button" class="profile__button-edit"></button>
                         </div>
-                        <p class="profile__info-jobs">Explorer</p>
+                        <p class="profile__info-jobs">Penjelajah</p>
                     </div>
 
-                    <button type="button" class="profile__button-add">
-                        <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path class="profile__button-add" d="M22 9.77778H12.2222V0H9.77778V9.77778H0V12.2222H9.77778V22H12.2222V12.2222H22V9.77778Z" fill="white"/>
-                        </svg>
-                        </button>
+                    <button type="button" class="profile__button-add"></button>
                 </section>
 
-            <section class="photo-grid">
-                    <div class="photo-grid__cards">
-                        <img src="./images/Kaldera-Prapat-1.jpg" alt="Kaldera-Prapat-1" class="photo-grid__cards-item">
-                        <p class="photo-grid__cards-text">Kaldera Parapat</p>
-                        <button class="photo-grid__cards-love" type="button"><img src="./images/heart.svg" alt="love" id="love-1"></button>
-                    </div>
-
-                    <div class="photo-grid__cards">
-                        <img src="./images/Kaldera-Prapat-2.jpg" alt="Kaldera-Prapat-2" class="photo-grid__cards-item">
-                        <p class="photo-grid__cards-text">Kaldera Parapat</p>
-                        <button class="photo-grid__cards-love" type="button"><img src="./images/love.png" alt="love" id="love-2"></button>
-                    </div>
-
-                    <div class="photo-grid__cards">
-                        <img src="./images/Kaldera-Prapat-3.jpg" alt="Kaldera-Prapat-3" class="photo-grid__cards-item">
-                        <p class="photo-grid__cards-text">Kaldera Parapat</p>
-                        <button class="photo-grid__cards-love" type="button"><img src="./images/love.png" alt="love" id="love-3"></button>
-                    </div>
-
-                    <div class="photo-grid__cards">
-                        <img src="./images/Tara-Bunga.jpg" alt="Tara-Bunga" class="photo-grid__cards-item">
-                        <p class="photo-grid__cards-text">Tara Bunga</p>
-                        <button class="photo-grid__cards-love" type="button"><img src="./images/love.png" alt="love" id="love-4"></button>
-                    </div>
-
-                    <div class="photo-grid__cards">
-                        <img src="./images/Hotel-Niagara-Prapat.jpg" alt="Hotel-Niagara-Prapat" class="photo-grid__cards-item">
-                        <p class="photo-grid__cards-text">Hotel Niagara Parapat</p>
-                        <button class="photo-grid__cards-love" type="button"><img src="./images/love.png" alt="love" id="love-5"></button>
-                    </div>
-
-                    <div class="photo-grid__cards">
-                        <img src="./images/Hotel-Niagara-Prapat-View.jpg" alt="Hotel-Niagara-Prapat-View." class="photo-grid__cards-item">
-                        <p class="photo-grid__cards-text">Hotel Niagara Parapat</p>
-                        <button class="photo-grid__cards-love" type="button"><img src="./images/love.png" alt="love" id="love-6"></button>
-                    </div>
+            <template class="template">
+                <section class="photo-grid__cards">
+                    <img src="./images/Kaldera-Prapat-1.jpg" alt="Kaldera-Prapat-1" class="photo-grid__cards-item">
+                    <p class="photo-grid__cards-text">Kaldera Parapat</p>
+                    <button class="photo-grid__cards-love" type="button"></button>
                 </section>
+            </template>
+            
+            <section class="photo-grid"></section>
 
                 <section class="pop-up">
                     <div class="pop-up__overlay">
-                        <div class="pop-up__container">
+                        <form class="pop-up__container">
                             <h2 class="pop-up__container-title">Edit Profile</h2>
                             <input type="text" class="pop-up__container-names" id="names" name="names" value="Bastian Gunawan">
-                            <input type="text" class="pop-up__container-jobs" id="jobs" name="jobs" value="Explorer">
+                            <input type="text" class="pop-up__container-jobs" id="jobs" name="jobs" value="Penjelajah">
                             <button class="pop-up__close" type="button">
                                 <svg viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path class="pop-up__close-button" d="M32.7661 29.5683L19.9759 16.778L32.7661 3.98779L29.5686 0.790236L16.7783 13.5805L3.98808 0.790236L0.790527 3.98779L13.5808 16.778L0.790527 29.5683L3.98808 32.7658L16.7783 19.9756L29.5686 32.7658L32.7661 29.5683Z" fill="white"/>
                                 </svg>
                             </button>
-                            <button class="pop-up__save" type="button">SAVE</button>
-                        </div>
+                            <button class="pop-up__save" type="button">SIMPAN</button>
+                        </form>
                     </div>
                         
                 </section>
-            <script src="./index.js"></script>
+
         </main>
            
         <footer class="footer">
             <h2 class="footer__copyright">&#169; 2023 Bastian Gunawan</h2>
         </footer>
+
+    <script src="./index.js"></script>
+
     </div>
 </body>
 
