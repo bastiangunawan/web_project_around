@@ -10,17 +10,15 @@ const inputJobs = document.querySelector('input[id="jobs"]');
 
 edit.addEventListener('click', () => {
     pop.classList.add('pop-up--active');
-    body.classList.add('body--active');
 });
 close.addEventListener('click', () => {
     pop.classList.remove('pop-up--active');
-    body.classList.remove('body--active');
 });
-save.addEventListener('click', () => {
-    names.innerHTML = inputNames.value;
-    jobs.innerHTML = inputJobs.value;
+save.addEventListener('submit', function(e) => {
+    e.preventDefault();
+    names.textContent = inputNames.value;
+    jobs.textContent = inputJobs.value;
     pop.classList.remove('pop-up--active');
-    body.classList.remove('body--active');
 });
 
 const template = document.querySelector('template');
@@ -65,13 +63,13 @@ const data = [
 ]
 
 function loveActive() {
-    this.classList.add('photo-grid__cards-love--active')
+    this.classList.add('photo-grid__cards-love--active');
 }
 
 for (let i = 0; i < 6; i++) {
     const clone = template.content.cloneNode(true);
 
-    const gridCards = clone.querySelector('.photo-grid__cards');
+    /*const gridCards = clone.querySelector('.photo-grid__cards');*/
     const gridImages = clone.querySelector('.photo-grid__cards-item');
     const gridText = clone.querySelector('.photo-grid__cards-text');
     const gridLove = clone.querySelector('.photo-grid__cards-love');
