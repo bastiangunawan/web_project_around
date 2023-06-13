@@ -2,7 +2,7 @@ const edit = document.querySelector('.profile__button-edit');
 const pop = document.querySelector('.pop-up');
 const body = document.querySelector('.body');
 const close = document.querySelector('.pop-up__close');
-const save = document.querySelector('.pop-up__save');
+const form = document.querySelector('.pop-up__container');
 const names = document.querySelector('.profile__info-names');
 const jobs = document.querySelector('.profile__info-jobs')
 const inputNames = document.querySelector('input[id="names"]');
@@ -14,7 +14,7 @@ edit.addEventListener('click', () => {
 close.addEventListener('click', () => {
     pop.classList.remove('pop-up--active');
 });
-save.addEventListener('submit', function(e) => {
+form.addEventListener('submit', (e) => {
     e.preventDefault();
     names.textContent = inputNames.value;
     jobs.textContent = inputJobs.value;
