@@ -1,6 +1,6 @@
 .pop-up__container-title{
     width: 358px;
-    margin: 34px auto 0;
+    margin: 34px auto 54px;
     font-family: inter;
     font-style: normal;
     font-weight: 900;
@@ -12,7 +12,7 @@
 @media screen and (min-width: 320px) and (max-width: 1279px) {
     .pop-up__container-title{
         width: 238px;
-        margin: 25px auto 0;
+        margin: 25px auto 76px;
         font-size: 18px;
         line-height: 22px;
     }

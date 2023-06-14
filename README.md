@@ -4,10 +4,11 @@
 
 * Figma
 * Gambar
+* Proyek ini  adalah proyek pertama saya untuk mengabungkan HTML, CSS dengan fungsi JavaScript
 
-**Figma**
+**GitHub**
 
-* [Tautan ke proyek di Figma](https://www.figma.com/file/SurN1jaeEQIhuZEDMhmWWf/Sprint-4-Around-The-U.S.-desktop-mobile?node-id=0%3A1)
+* [Tautan ke proyek di GitHub](https://bastiangunawan.github.io/web_project_4_id/)
 
 **Gambar**
 
