@@ -29,43 +29,16 @@
                     <button type="button" class="profile__button-add"></button>
                 </section>
             
-            <section class="photo-grid">
-                <div class="photo-grid__cards">
-                    <img src="./images/Kaldera-Prapat-1.jpg" alt="Kaldera-Prapat-1" class="photo-grid__cards-item">
-                    <h2 class="photo-grid__cards-text">Kaldera Parapat</h2>
-                    <button class="photo-grid__cards-love" type="button"></button>
-                </div>
+                <template class="template">
+                    <section class="photo-grid__cards">
+                        <img src="./images/Kaldera-Prapat-1.jpg" alt="Kaldera-Prapat-1" class="photo-grid__cards-item">
+                        <button class="photo-grid__delete" type="button"></button>
+                        <p class="photo-grid__cards-text">Kaldera Parapat</p>
+                        <button class="photo-grid__cards-love" type="button"></button>
+                    </section>
+                </template>
 
-                <div class="photo-grid__cards">
-                    <img src="./images/Kaldera-Prapat-2.jpg" alt="Kaldera-Prapat-2" class="photo-grid__cards-item">
-                    <h2 class="photo-grid__cards-text">Kaldera Parapat</h2>
-                    <button class="photo-grid__cards-love" type="button"></button>
-                </div>
-
-                <div class="photo-grid__cards">
-                    <img src="./images/Kaldera-Prapat-3.jpg" alt="Kaldera-Prapat-3" class="photo-grid__cards-item">
-                    <h2 class="photo-grid__cards-text">Kaldera Parapat</h2>
-                    <button class="photo-grid__cards-love" type="button"></button>
-                </div>
-                
-                <div class="photo-grid__cards">
-                    <img src="./images/Tara-Bunga.jpg" alt="Tara Bunga" class="photo-grid__cards-item">
-                    <h2 class="photo-grid__cards-text">Tara Bungat</h2>
-                    <button class="photo-grid__cards-love" type="button"></button>
-                </div>
-                
-                <div class="photo-grid__cards">
-                    <img src="./images/Hotel-Niagara-Prapat.jpg" alt="Hotel Niagara Parapat" class="photo-grid__cards-item">
-                    <h2 class="photo-grid__cards-text">Hotel Niagara Parapat</h2>
-                    <button class="photo-grid__cards-love" type="button"></button>
-                </div>
-                
-                <div class="photo-grid__cards">
-                    <img src="./images/Hotel-Niagara-Prapat-View.jpg" alt="Hotel Niagara Parapat" class="photo-grid__cards-item">
-                    <h2 class="photo-grid__cards-text">Hotel Niagara Parapatt</h2>
-                    <button class="photo-grid__cards-love" type="button"></button>
-                </div>
-            </section>
+                <section class="photo-grid"></section>
 
                 <section class="pop-up">
                     <div class="pop-up__overlay">
@@ -77,7 +50,18 @@
                             <button class="pop-up__save" type="submit">SIMPAN</button>
                         </form>
                     </div>
-                        
+                </section>
+
+                <section class="pop-add">
+                    <div class="pop-add__overlay">
+                        <form class="pop-add__container">
+                            <h2 class="pop-add__container-title">Tempat Baru</h2>
+                            <input type="text" class="pop-add__input" id="names" name="names" placeholder="Judul:">
+                            <input type="text" class="pop-add__input" id="jobs" name="jobs" placeholder="URL gambar">
+                            <button class="pop-add__close" type="button"></button>
+                            <button class="pop-add__save" type="submit">SIMPAN</button>
+                        </form>
+                    </div>
                 </section>
 
         </main>
