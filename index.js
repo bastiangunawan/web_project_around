@@ -13,7 +13,7 @@ const closes = document.querySelector('.pop-add__close');
 const nameValue = document.querySelector('.photo-grid__cards-text');
 const ursValue = document.querySelector('photo-grid__cards-item');
 const formAdd = document.querySelector('.pop-add__container');
-const inputPlace = document.querySelector('.input[id="place"]');
+const inputPlace = document.querySelector('input[id="place"]');
 const inputPict = document.querySelector('input[id="pict"]')
 const template = document.querySelector('template');
 const photoGrid = document.querySelector('.photo-grid');
@@ -22,37 +22,31 @@ const data = [
     {
         image: './images/Kaldera-Prapat-1.jpg',
         title: 'Kaldera Parapat',
-        love: './images/heart.svg',
     },
 
     {
         image: './images/Kaldera-Prapat-2.jpg',
         title: 'Kaldera Parapat',
-        love: './images/heart.svg',
     },
 
     {
         image: './images/Kaldera-Prapat-3.jpg',
         title: 'Kaldera Parapat',
-        love: './images/heart.svg',
     },
 
     {
         image: './images/Tara-Bunga.jpg',
         title: 'Taram Bunga',
-        love: './images/heart.svg',
     },
 
     {
         image: './images/Hotel-Niagara-Prapat.jpg',
         title: 'Hotel Niagara Parapat',
-        love: './images/heart.svg',
     },
 
     {
         image: './images/Hotel-Niagara-Prapat-View.jpg',
         title: 'Hotel Niagara Parapat',
-        love: './images/heart.svg',
     },
 ]
 
@@ -80,8 +74,8 @@ closes.addEventListener('click', () =>{
 formAdd.addEventListener('submit', (e) => {
     e.preventDefault();
     data.push({
-        name: inputPlace.value,
-        title: inputPict.value,
+        image: inputPict.value,
+        title: inputPlace.value,        
     })
     renderCards()
     popAdd.classList.remove('pop-add--active');

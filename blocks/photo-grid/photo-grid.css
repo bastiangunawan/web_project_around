@@ -1,6 +1,6 @@
 .photo-grid{
     width: 880px;
-    height: 743px;
+    height: fit-content;
     display: flex;
     flex-wrap: wrap;
     gap: 20px 17px;
