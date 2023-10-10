@@ -17,7 +17,6 @@ const inputPlace = document.querySelector('input[id="place"]');
 const inputPict = document.querySelector('input[id="pict"]')
 const template = document.querySelector('template');
 const photoGrid = document.querySelector('.photo-grid');
-const trash = document.querySelector('.photo-grid__delete');
 
 const data = [
     {
@@ -91,7 +90,7 @@ function renderCards(){
     for (let i = 0; i < data.length; i++) {
         const clone = template.content.cloneNode(true);
     
-        /*const gridCards = clone.querySelector('.photo-grid__cards');*/
+        const trash = clone.querySelector('.photo-grid__delete');
         const gridImages = clone.querySelector('.photo-grid__cards-item');
         const gridText = clone.querySelector('.photo-grid__cards-text');
         const gridLove = clone.querySelector('.photo-grid__cards-love');
@@ -103,15 +102,13 @@ function renderCards(){
         gridLove.addEventListener('click', loveActive);
     
         photoGrid.appendChild(clone);
-    } 
 
-    trash.addEventListener('click', () =>{
-        const gridCards = document.querySelector('.photo-grid__cards');
-        gridCards.forEach((item) => {
-            item.remove('.photo-grid__cards'); 
+        trash.addEventListener('click', () =>{
+            console.log('trash');
+            data.splice(i,1);
+            renderCards();
         });
-        renderCards();
-    });
+    } 
 }
 
 renderCards()
