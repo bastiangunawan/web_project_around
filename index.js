@@ -17,6 +17,7 @@ const inputPlace = document.querySelector('input[id="place"]');
 const inputPict = document.querySelector('input[id="pict"]')
 const template = document.querySelector('template');
 const photoGrid = document.querySelector('.photo-grid');
+const trash = document.querySelector('.photo-grid__delete');
 
 const data = [
     {
@@ -79,8 +80,7 @@ formAdd.addEventListener('submit', (e) => {
     })
     renderCards()
     popAdd.classList.remove('pop-add--active');
-});
-
+});    
 
 function loveActive() {
     this.classList.add('photo-grid__cards-love--active');
@@ -103,7 +103,15 @@ function renderCards(){
         gridLove.addEventListener('click', loveActive);
     
         photoGrid.appendChild(clone);
-    }
+    } 
+
+    trash.addEventListener('click', () =>{
+        const gridCards = document.querySelector('.photo-grid__cards');
+        gridCards.forEach((item) => {
+            item.remove('.photo-grid__cards'); 
+        });
+        renderCards();
+    });
 }
 
 renderCards()
