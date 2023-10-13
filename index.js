@@ -77,7 +77,7 @@ formAdd.addEventListener('submit', (e) => {
         image: inputPict.value,
         title: inputPlace.value,        
     })
-    renderCards()
+    /*renderCards()*/
     popAdd.classList.remove('pop-add--active');
 });    
 
@@ -104,9 +104,8 @@ function renderCards(){
         photoGrid.appendChild(clone);
 
         trash.addEventListener('click', () =>{
-            console.log('trash');
-            data.splice(i,1);
-            renderCards();
+            const gridPhoto = trash.closest('.photo-grid__cards');
+            gridPhoto.remove()
         });
     } 
 }

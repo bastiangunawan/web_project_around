@@ -8,7 +8,7 @@
 
 **GitHub**
 
-* [Tautan ke proyek di GitHub](https://bastiangunawan.github.io/web_project_4_id/)
+* [Tautan ke proyek di GitHub](https://bastiangunawan.github.io/web_project_around/)
 
 **Gambar**
 
