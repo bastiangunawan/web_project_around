@@ -11,7 +11,7 @@ const add = document.querySelector('.profile__button-add');
 const popAdd = document.querySelector('.pop-add');
 const closes = document.querySelector('.pop-add__close');
 const nameValue = document.querySelector('.photo-grid__cards-text');
-const ursValue = document.querySelector('photo-grid__cards-item');
+const urlsValue = document.querySelector('photo-grid__cards-item');
 const formAdd = document.querySelector('.pop-add__container');
 const inputPlace = document.querySelector('input[id="place"]');
 const inputPict = document.querySelector('input[id="pict"]')
@@ -73,11 +73,10 @@ closes.addEventListener('click', () =>{
 });
 formAdd.addEventListener('submit', (e) => {
     e.preventDefault();
-    data.push({
-        image: inputPict.value,
-        title: inputPlace.value,        
-    })
-    /*renderCards()*/
+    cloneTemplate(
+        inputPict.value,
+        inputPlace.value,        
+    )
     popAdd.classList.remove('pop-add--active');
 });    
 
@@ -85,29 +84,37 @@ function loveActive() {
     this.classList.add('photo-grid__cards-love--active');
 }
 
+function cloneTemplate(image, title){
+    /*photoGrid.innerHTML = '';
+    for (let i = 0; i < data.length; i++) {*/
+    const clone = template.content.cloneNode(true);
+
+    const trash = clone.querySelector('.photo-grid__delete');
+    const gridImages = clone.querySelector('.photo-grid__cards-item');
+    const gridText = clone.querySelector('.photo-grid__cards-text');
+    const gridLove = clone.querySelector('.photo-grid__cards-love');
+
+    gridImages.src = /*data[i].*/image;
+    gridText.innerHTML = /*data[i].*/title;
+
+    gridLove.addEventListener('click', loveActive);
+
+    photoGrid.appendChild(clone);
+
+    trash.addEventListener('click', () =>{
+        const gridPhoto = trash.closest('.photo-grid__cards');
+        gridPhoto.remove()
+    });
+} 
+
 function renderCards(){
     photoGrid.innerHTML = '';
     for (let i = 0; i < data.length; i++) {
-        const clone = template.content.cloneNode(true);
-    
-        const trash = clone.querySelector('.photo-grid__delete');
-        const gridImages = clone.querySelector('.photo-grid__cards-item');
-        const gridText = clone.querySelector('.photo-grid__cards-text');
-        const gridLove = clone.querySelector('.photo-grid__cards-love');
-    
-        gridImages.src = data[i].image;
-        gridText.innerHTML = data[i].title;
-        gridLove.src = data[i].image;
-    
-        gridLove.addEventListener('click', loveActive);
-    
-        photoGrid.appendChild(clone);
-
-        trash.addEventListener('click', () =>{
-            const gridPhoto = trash.closest('.photo-grid__cards');
-            gridPhoto.remove()
-        });
-    } 
+        cloneTemplate(
+            data[i].image,
+            data[i].title,
+        )
+    }
 }
 
 renderCards()
