@@ -85,8 +85,6 @@ function loveActive() {
 }
 
 function cloneTemplate(image, title){
-    /*photoGrid.innerHTML = '';
-    for (let i = 0; i < data.length; i++) {*/
     const clone = template.content.cloneNode(true);
 
     const trash = clone.querySelector('.photo-grid__delete');
