@@ -7,7 +7,7 @@ const names = document.querySelector('.profile__info-names');
 const jobs = document.querySelector('.profile__info-jobs')
 const inputNames = document.querySelector('input[id="names"]');
 const inputJobs = document.querySelector('input[id="jobs"]');
-const add = document.querySelector('.profile__button-add');
+const addCards = document.querySelector('.profile__button-add');
 const popAdd = document.querySelector('.pop-add');
 const closes = document.querySelector('.pop-add__close');
 const nameValue = document.querySelector('.photo-grid__cards-text');
@@ -63,9 +63,7 @@ form.addEventListener('submit', (e) => {
     pop.classList.remove('pop-up--active');
 });
 
-add.addEventListener('click', () =>{
-    inputNames.value = names.textContent;
-    inputJobs.value = jobs.textContent;
+addCards.addEventListener('click', () =>{
     popAdd.classList.add('pop-add--active');
 });
 closes.addEventListener('click', () =>{
@@ -93,17 +91,24 @@ function cloneTemplate(image, title){
     const gridLove = clone.querySelector('.photo-grid__cards-love');
 
     gridImages.src = /*data[i].*/image;
-    gridText.innerHTML = /*data[i].*/title;
+    gridText.textContent = /*data[i].*/title;
 
     gridLove.addEventListener('click', loveActive);
 
     photoGrid.appendChild(clone);
 
-    trash.addEventListener('click', () =>{
+    /*trash.addEventListener('click', () =>{
         const gridPhoto = trash.closest('.photo-grid__cards');
         gridPhoto.remove()
-    });
+    });*/
 } 
+
+function handleDel(trash) {
+    trash.addEventListener('click', () => {
+        const gridPhoto = trash.closest('.photo-grid__cards')
+        gridPhoto.remove()
+    })
+}
 
 function renderCards(){
     photoGrid.innerHTML = '';
