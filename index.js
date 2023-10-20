@@ -78,8 +78,16 @@ formAdd.addEventListener('submit', (e) => {
     popAdd.classList.remove('pop-add--active');
 });    
 
-function loveActive() {
+/*function loveActive() {
     this.classList.add('photo-grid__cards-love--active');
+    this.classList.remove('photo-grid__cards-love:hover');
+}*/
+
+function handleDel(trash) {
+    trash.addEventListener('click', () => {
+        const gridPhoto = trash.closest('.photo-grid__cards')
+        gridPhoto.remove()
+    })
 }
 
 function cloneTemplate(image, title){
@@ -90,25 +98,18 @@ function cloneTemplate(image, title){
     const gridText = clone.querySelector('.photo-grid__cards-text');
     const gridLove = clone.querySelector('.photo-grid__cards-love');
 
-    gridImages.src = /*data[i].*/image;
-    gridText.textContent = /*data[i].*/title;
+    gridImages.src = image;
+    gridText.textContent = title;
 
-    gridLove.addEventListener('click', loveActive);
+    gridLove.addEventListener('click', (e) =>{
+        e.target.classList.toggle('photo-grid__cards-love--active');
+        e.target.classList.remove('photo-grid__cards-love:hover');
+    });
 
     photoGrid.appendChild(clone);
 
-    /*trash.addEventListener('click', () =>{
-        const gridPhoto = trash.closest('.photo-grid__cards');
-        gridPhoto.remove()
-    });*/
+    handleDel(trash)
 } 
-
-function handleDel(trash) {
-    trash.addEventListener('click', () => {
-        const gridPhoto = trash.closest('.photo-grid__cards')
-        gridPhoto.remove()
-    })
-}
 
 function renderCards(){
     photoGrid.innerHTML = '';
