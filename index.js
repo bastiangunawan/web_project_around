@@ -78,11 +78,6 @@ formAdd.addEventListener('submit', (e) => {
     popAdd.classList.remove('pop-add--active');
 });    
 
-/*function loveActive() {
-    this.classList.add('photo-grid__cards-love--active');
-    this.classList.remove('photo-grid__cards-love:hover');
-}*/
-
 function handleDel(trash) {
     trash.addEventListener('click', () => {
         const gridPhoto = trash.closest('.photo-grid__cards')
@@ -103,7 +98,7 @@ function cloneTemplate(image, title){
 
     gridLove.addEventListener('click', (e) =>{
         e.target.classList.toggle('photo-grid__cards-love--active');
-        e.target.classList.remove('photo-grid__cards-love:hover');
+        e.target.classList.toggle('photo-grid__cards-love');
     });
 
     photoGrid.appendChild(clone);
